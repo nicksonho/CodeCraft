@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "codicon";
+    src: url("https://cdn.jsdelivr.net/gh/microsoft/vscode-codicons/dist/codicon.ttf") format("truetype");
+  }
+  
+  .codicon {
+    font-family: "codicon";
+    font-display: block;
+  }
+  
+  .codicon-debug:before {
+    content: "\ea71";
+  }
+  .codicon-symbol-loop:before {
+    content: "\eb8b";
+  }
+  .codicon-symbol-method:before {
+    content: "\eb8e";
+  }
+  .codicon-symbol-class:before {
+    content: "\eb5b";
+  }
+  .codicon-lock:before {
+    content: "\ea75";
+  }
+  .codicon-mic:before {
+    content: "\ebc2";
+  }
+  .codicon-device-camera:before {
+    content: "\ebd8";
+  }
+  .codicon-send:before {
+    content: "\ea63";
+  }
+  
+  

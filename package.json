@@ -1,0 +1,60 @@
+{
+  "name": "codecraft",
+  "displayName": "codecraft",
+  "description": "CodeCraft is an AI-powered educational tool designed to help beginner programmers learn coding concepts, debugging, and problem-solving through guided interaction rather than direct answers. It acts as a \"Socratic coding mentor\" that fosters independent thinking and deeper understanding of programming principles.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codecraft.openAIMentor",
+        "title": "Open AI Coding Mentor"
+      },
+      {
+        "command": "codecraft.explainError",
+        "title": "Explain This Error"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codecraft.explainError",
+          "when": "editorHasDocumentSelectionFormattingProvider"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codecraft.openAIMentor",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.98.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
